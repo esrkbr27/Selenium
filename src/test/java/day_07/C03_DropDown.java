@@ -70,6 +70,13 @@ oldugunu testedin
         WebElement ddm = driver.findElement(By.xpath("//*[@id='searchDropdownBox']"));
         select= new Select(ddm);
 
+        List<WebElement> ddmList=select.getOptions();
+        System.out.println(ddmList.size());
+
+        int expectedNumber=45;
+        int actualNumber= ddmList.size();
+        Assert.assertNotEquals(expectedNumber,actualNumber);
+
         /*
         Eger dropdown menudekı optiona string kullanarak
         ulaşmak istiyorsak "selectByVisibleText" metodu ile
