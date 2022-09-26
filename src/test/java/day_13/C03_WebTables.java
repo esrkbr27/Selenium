@@ -35,6 +35,7 @@ sutunlara yani hucrelere<td> tag'i ile ulasilir.
         WebElement cell=driver.findElement(By.xpath("//tbody//tr["+satir+"]//td["+sutun+"]"));
         System.out.println("3. satir,4. sutundakı text: "+cell.getText());
 
+        //PhoneNo baslıgındakı tum numaraları yazdıralım
       List< WebElement> phone=driver.findElements(By.xpath("//tbody//tr//td[6]"));
       //1. yol;
          phone.forEach(t-> System.out.println(t.getText()));
@@ -43,6 +44,22 @@ sutunlara yani hucrelere<td> tag'i ile ulasilir.
         for (WebElement w:phone) {
             System.out.println(w.getText());
         }
+
+        List<WebElement> isimler=driver.findElements(By.xpath("//tbody//td[4]"));
+        List<WebElement> mailler=driver.findElements(By.xpath("//tbody//td[3]"));
+
+        for (int i = 0; i < isimler.size(); i++) {
+            System.out.print(isimler.get(i).getText()+" -->  "+mailler.get(i).getText());
+            System.out.println();
+        }
+
+
+        for (int i=0; i<isimler.size(); i++){
+            if(isimler.get(i).getText().contains("ce")){
+                System.out.println(isimler.get(i).getText()+" --->"+mailler.get(i).getText());
+            }
+        }
+
 
 
     }
@@ -57,4 +74,5 @@ sutunlara yani hucrelere<td> tag'i ile ulasilir.
 
 
     }
+
 }

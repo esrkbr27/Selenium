@@ -16,6 +16,11 @@ public class CO2_FileExistsUpload extends TestBaseBeforeAfter {
     Upload butonuna basalim.
      “File Uploaded!” textinin goruntulendigini test edelim.
      */
+    String farkliKisim=System.getProperty("user.home");
+    String ortakKisim="\\Downloads\\Terimler.txt";
+    String arananDosyaYolu=farkliKisim+ortakKisim;
+
+
 
     @Test
     public void test1() {

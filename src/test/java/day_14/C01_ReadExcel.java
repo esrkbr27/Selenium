@@ -48,6 +48,7 @@ public class C01_ReadExcel  {
         Cell cell=row.getCell(3);
         //- 3. index'deki satirin 3. index'indeki datanin Cezayir oldugunu test edin
         System.out.println(cell);
+
         String expectedData="Cezayir";
         String actualData= cell.toString();
 

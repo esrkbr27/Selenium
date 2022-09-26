@@ -20,6 +20,9 @@ public class C03_ReadExcel {
         Sonucun konsolda yazılanla aynı oldugunu doğrulayın.
          */
 
+
+
+
         int satir=12;
         int sütun=2;
 
